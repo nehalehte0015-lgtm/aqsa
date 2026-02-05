@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose an envelope ❤️</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.box {
+  background: white;
+  width: 100%;
+  padding: 28px 10px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  text-align: center;
+  font-size: 26px;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+
+.box span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* center the last card */
+.center-box {
+  grid-column: 1 / -1;
+  width: 60%;
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <h2 class="title">Choose an envelope</h2>
+  <p class="subtitle">Explore the little things I love about us.</p>
+
+  <div class="grid">
+
+    <a href="memories.html" class="box">
+      📷<span>Our Memories</span>
+    </a>
+
+    <a href="letter.html" class="box">
+      ✉️<span>My Letter</span>
+    </a>
+
+    <a href="date.html" class="box center-box">
+      📅<span>Valentine?</span>
+    </a>
+
+  </div>
+
+  <br>
+  <a href="index.html" class="back">Back</a>
+
+</div>
+<script src="effects.js"></script>
+</body>
+</html>

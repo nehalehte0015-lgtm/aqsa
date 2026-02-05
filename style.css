@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ffeef3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.heart {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #ff4f7b;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff4f7b;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.title {
+  color: #ff4f7b;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.box {
+  background: white;
+  padding: 25px 10px;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.box span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #333;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.back {
+  display: inline-block;
+  border: 2px solid #ff4f7b;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ff4f7b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Memories gallery fix ===== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  justify-items: center;
+}
+
+/* Make last item centered */
+.grid .center-box {
+  grid-column: 1 / -1;   /* span full row */
+  width: 60%;
+}
+/* Floating hearts background */
+.hearts {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart-float {
+  position: absolute;
+  bottom: -40px;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+/* Confetti animation */
+
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  animation: fall linear forwards;
+  z-index: 999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
